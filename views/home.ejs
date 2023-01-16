@@ -64,7 +64,59 @@
     <!-- <link rel="stylesheet" href="/styles/grid.css"> -->
     <!-- <link rel="stylesheet" href="/styles/app.css">  -->
 
-    <style></style>
+    <style>
+  body {
+        background-image: url("https://www.mhesi.go.th/images/2563/pornnapa/280163/Sirindhron_AstroPark/AstroPark_4.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+  }
+
+  nav {
+    background-color: aliceblue;
+  }
+
+  nav .nvbr{
+    display: flex;
+    width: 83%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 30px;
+    padding-top: 15px;
+    position: relative;
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #ff6200e0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(4, 0, 255);
+    font-weight: bold;
+} 
+
+ nav ul li:hover::after{
+    width: 100%;
+ }
+
+
+
+    </style>
 
     <link
       rel="stylesheet"
@@ -73,14 +125,19 @@
   </head>
 
   <body>
-    <div>
-      <a href="login">
-      <button on class="btnloginadmin" id="adminloginpage" >
-        For admin
-        <i class="fa fa-sign-in" style="font-size: 16px; color: white"></i>
-      </button>
-    </a>
+    <nav>
+    <div class="nvbr">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/NaritLogoPng_0.png" height="50" alt="">
+      <ul>
+          <li><a href="login">
+          <!-- <button on class="btnloginadmin" id="adminloginpage" > -->
+            Admin Login
+            <!-- <i class="fa fa-sign-in" style="font-size: 16px; color: white"></i>
+          </button> -->
+          </a></li>
+  </ul>
     </div>
+    </nav>
     <div class="container" id="container"></div>
   </body>
 </html>
